@@ -1,0 +1,283 @@
+{
+  "Model": null,
+  "Description": "",
+  "BlendMode": "Opaque",
+  "nodes": [
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/dev/white_color.tga",
+      "Sampler": {},
+      "UI": {
+        "Default": "1,1,1,1",
+        "SrgbRead": true,
+        "CreateInput": "CreateInputTexture2D"
+      },
+      "Identifier": "0",
+      "Position": "-160,-416",
+      "Coords": {
+        "Identifier": "13",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Lerp",
+      "Fraction": 0.5,
+      "Identifier": "1",
+      "Position": "240,-400",
+      "A": {
+        "Identifier": "17",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "16",
+        "Output": "Result"
+      },
+      "C": {
+        "Identifier": "0",
+        "Output": "R"
+      }
+    },
+    {
+      "_class": "Add",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "2",
+      "Position": "-160,-96",
+      "A": {
+        "Identifier": "11",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "12",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "WorldNormal",
+      "Identifier": "3",
+      "Position": "-688,-48"
+    },
+    {
+      "_class": "Step",
+      "DefaultInput": 0,
+      "DefaultEdge": 0,
+      "Identifier": "4",
+      "Position": "640,-96",
+      "Input": {
+        "Identifier": "6",
+        "Output": "Result"
+      },
+      "Edge": {
+        "Identifier": "20",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "WorldPosition",
+      "Identifier": "5",
+      "Position": "128,-160"
+    },
+    {
+      "_class": "Fresnel",
+      "DefaultPower": 10,
+      "Identifier": "6",
+      "Position": "368,-144",
+      "Normal": {
+        "Identifier": "5",
+        "Output": "Result"
+      },
+      "Direction": {
+        "Identifier": "5",
+        "Output": "Result"
+      },
+      "Power": {
+        "Identifier": "21",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "7",
+      "Position": "848,-96"
+    },
+    {
+      "_class": "Max",
+      "DefaultA": 0,
+      "DefaultB": 0,
+      "Identifier": "8",
+      "Position": "1008,48",
+      "InputA": {
+        "Identifier": "13",
+        "Output": "Result"
+      },
+      "InputB": {
+        "Identifier": "4",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Step",
+      "DefaultInput": 0,
+      "DefaultEdge": 0,
+      "Identifier": "9",
+      "Position": "608,208"
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "224,186",
+      "Color": "Green",
+      "Title": "Untitled",
+      "Description": "",
+      "Layer": 1,
+      "Identifier": "10",
+      "Position": "576,144"
+    },
+    {
+      "_class": "DotProduct",
+      "Identifier": "11",
+      "Position": "-368,-96",
+      "InputA": {
+        "Identifier": "3",
+        "Output": "Result"
+      },
+      "InputB": {
+        "Identifier": "3",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 1,
+      "Name": "",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "12",
+      "Position": "-384,64"
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "13",
+      "Position": "-32,-96",
+      "A": {
+        "Identifier": "2",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "14",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 0.506196,
+      "Name": "",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "14",
+      "Position": "-160,64"
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "224,288",
+      "Color": "Green",
+      "Title": "Untitled",
+      "Description": "",
+      "Layer": 1,
+      "Identifier": "15",
+      "Position": "-176,-496"
+    },
+    {
+      "_class": "Float4",
+      "Value": "0.93976,0,0,1",
+      "Name": "",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Color"
+      },
+      "Identifier": "16",
+      "Position": "-16,-752"
+    },
+    {
+      "_class": "Float4",
+      "Value": "0.27108,0,0,1",
+      "Name": "",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Color"
+      },
+      "Identifier": "17",
+      "Position": "64,-560"
+    },
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "18",
+      "Position": "576,-640",
+      "Albedo": {
+        "Identifier": "1",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/dev/white_color.tga",
+      "Sampler": {},
+      "UI": {
+        "Default": "1,1,1,1",
+        "SrgbRead": true,
+        "CreateInput": "CreateInputTexture2D"
+      },
+      "Identifier": "19",
+      "Position": "1216,-80",
+      "Coords": {
+        "Identifier": "8",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 1,
+      "Name": "",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "20",
+      "Position": "416,32"
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 0.6432836,
+      "Name": "",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "21",
+      "Position": "192,16"
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/dev/white_color.tga",
+      "Sampler": {},
+      "UI": {
+        "Default": "1,1,1,1",
+        "SrgbRead": true,
+        "CreateInput": "CreateInputTexture2D"
+      },
+      "Identifier": "22",
+      "Position": "-448,-784"
+    }
+  ]
+}
